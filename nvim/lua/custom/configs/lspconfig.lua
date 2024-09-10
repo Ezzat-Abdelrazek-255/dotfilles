@@ -5,7 +5,7 @@ local capabilities = base.capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = {"tsserver","tailwindcss","eslint","emmet_ls","cssls"}
+local servers = {"ts_ls","tailwindcss","eslint","emmet_ls","cssls","glsl_analyzer"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {

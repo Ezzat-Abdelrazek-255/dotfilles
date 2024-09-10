@@ -42,7 +42,8 @@ local plugins = { {
       "javascript",
       "typescript",
       "tsx",
-      "go"
+      "go",
+      "glsl"
     }
     return opts
   end
@@ -103,5 +104,15 @@ local plugins = { {
     }
     return opts
   end
-}, }
+}, {
+  "kevinhwang91/nvim-ufo",
+  event = "VeryLazy",
+  config = function()
+    require "custom.configs.ufo"
+  end,
+  dependencies = "kevinhwang91/promise-async"
+}, {
+  "tpope/vim-surround",
+  event = "VeryLazy",
+} }
 return plugins
